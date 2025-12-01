@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Kaw-pixel';
+  src: url('/style/fonts/kaw-pixel.otf.woff2/kaw-pixel.otf.woff2') format('woff2'),
+       url('/style/fonts/kaw-pixel.otf/kaw-pixel.otf') format('otf'),
+       url('/style/fonts/kaw-pixel.ttf/kaw-pixel.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'Jersey-10';
+    src: url('/style/fonts/Jersey_10/Jersey10-Regular.ttf') format('ttf'),
+         url('/style/fonts/webfonts_jersey-10/jersey-10-latin-400-normal.woff') format('woff'),
+         url('/style/fonts/webfonts_jersey-10/jersey-10-latin-400-normal.woff2') format('woff2');
+}
+.eng {
+    font-family: 'Jersey-10';
+}
+.ru {
+     font-family: 'Kaw-pixel';
+}

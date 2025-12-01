@@ -1,0 +1,36 @@
+/* Темная тема */
+body.dark-theme {
+    background-color: #121F27;
+}
+header.dark-theme {
+    color: white;
+}
+.btn-toggle.dark-theme{
+    color: #ffffff;
+    background-color: #242729;
+}
+main.dark-theme{
+    background-color: #292D2F;
+    color: #ffffff;
+}
+main.dark-theme a{
+    color: #E9F92F;
+}
+.main_info.dark-theme{
+    background-color: #242729;
+}
+.separator.dark-theme{
+    background-color: #181A1B;
+}
+ .diarhea_web.dark-theme {
+    color: #E9F92F;
+} 
+main .main_info .hidden.dark-theme {
+    color: white ;
+}
+/* .welcome.dark-theme {
+    color: #00B3FF;
+} */
+
+
+/* конец */

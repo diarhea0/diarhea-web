@@ -6,7 +6,7 @@
 }
 @font-face {
     font-family: 'Jersey-10';
-    src: url('Jersey_10/Jersey10-Regular.ttf') format('ttf'),
+    src: url('Jersey_10/Jersey10-Regular.ttf') format('truetype'),
          url('webfonts_jersey-10/jersey-10-latin-400-normal.woff') format('woff'),
          url('webfonts_jersey-10/jersey-10-latin-400-normal.woff2') format('woff2');
 }

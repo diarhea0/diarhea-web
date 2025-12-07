@@ -16,6 +16,9 @@ main.dark-theme{
 main.dark-theme a{
     color: #E9F92F;
 }
+main.dark-theme a:hover{
+    color: #BB1C1C;
+}
 .main_info.dark-theme{
     background-color: #242729;
 }
@@ -27,6 +30,14 @@ main.dark-theme a{
 } 
 main .main_info .hidden.dark-theme {
     color: white ;
+}
+.navigate .nava.dark-theme{
+    background-color: #242729;
+    color: #E9F92F;
+}
+.navigate .nava.dark-theme:hover{
+    background-color: #181A1B;
+    color: #BB1C1C;
 }
 /* .welcome.dark-theme {
     color: #00B3FF;

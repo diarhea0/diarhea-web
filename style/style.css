@@ -98,7 +98,32 @@ main .main_info a {
     text-decoration: none;
     color: #BB1C1C;
 }
+main .main_info a:hover {
+    color: #E7F91D;
+}
 main .main_info .hidden {
     text-decoration: none;
     color: black ;
+}
+main .main_info .hidden:hover {
+    color:  black;
+}
+
+button.nava {
+    border: none;
+    background-color: #D9D9D9;
+    color: #BB1C1C;
+    padding: 1%;
+    width: 230px;
+    height: 50px;
+    border-radius: 5px;
+}
+button.nava:hover {
+    color: #E7F91D;
+    background-color: #574000;
+}
+.navigate {
+    margin-left: 44%;
+    position: absolute;
+    margin-top: -710px;
 }

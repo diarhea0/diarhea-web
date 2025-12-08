@@ -1,11 +1,11 @@
-body{
+/* body{
     max-width: 1920px;
     height: max-content;
     margin-left: auto;
     margin-right: auto;
     margin-top: -50px;
-    -ms-overflow-style: none;  /* IE и Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     background-color: #121F27;
     color: #ffffff;
     overflow: hidden;
@@ -52,4 +52,101 @@ main a{
 main a:hover{
     text-decoration: none;
     color: #BB1C1C;
+} */
+
+body {
+    max-width: 1920px;
+    min-height: 100vh; /* На всю высоту экрана */
+    margin: 0 auto; /* Центрируем body и убираем лишние отступы */
+    
+    /* Скроллбары */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+    background-color: #121F27;
+    color: #ffffff;
+    
+    /* ВАЖНО: overflow: hidden запрещал скролл. 
+       Меняем на auto или x-hidden, чтобы можно было листать на телефоне */
+    overflow-x: hidden; 
+}
+
+/* Скрываем скроллбар для Chrome/Safari */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    background-color: #112938;
+    padding: 15px; /* Чуть больше воздуха */
+    text-align: center; /* Центрируем содержимое хедера (например, кнопки) */
+}
+
+button {
+    border: none;
+    background-color: #242729;
+    color: #E9F92F;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer; /* Курсор-рука при наведении */
+    transition: 0.3s; /* Плавная анимация цвета */
+    margin: 5px; /* Отступ, если кнопок несколько */
+}
+
+button:hover {
+    background-color: #121F27;
+    color: #BB1C1C;
+}
+
+main {
+    background-color: #242729;
+    
+    /* АДАПТИВНОСТЬ: */
+    width: 90%; /* На мобилках занимает 90% ширины */
+    max-width: 800px; /* На ПК не становится шире 800px */
+    height: auto; /* Высота подстраивается под контент */
+    box-sizing: border-box; /* Чтобы padding не увеличивал ширину блока */
+    
+    padding: 30px; /* Равномерные внутренние отступы */
+    
+    /* Центрирование блока main */
+    margin: 50px auto; 
+    
+    font-size: 24px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+main a {
+    text-decoration: none;
+    color: #E9F92F;
+    transition: 0.2s;
+    word-break: break-word; /* Чтобы длинные ссылки не ломали верстку на телефоне */
+}
+
+main a:hover {
+    text-decoration: none;
+    color: #BB1C1C;
+}
+
+/* --- МОБИЛЬНАЯ АДАПТАЦИЯ --- */
+/* Эти стили применятся только если экран меньше 768px (планшеты и телефоны) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    main {
+        width: 95%; /* Чуть шире на совсем маленьких экранах */
+        margin: 20px auto; /* Меньше отступ сверху/снизу */
+        padding: 20px;
+        font-size: 18px; /* Уменьшаем шрифт, чтобы влезало больше текста */
+    }
 }

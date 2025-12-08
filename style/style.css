@@ -1,14 +1,13 @@
-body{
+/* body{
     max-width: 1920px;
     height: max-content;
     margin-left: auto;
     margin-right: auto;
     margin-top: -50px;
-    -ms-overflow-style: none;  /* IE и Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
     background-color: #574000;
 }
-/* Скрываем scrollbar для Chrome, Safari и Opera */
 .body::-webkit-scrollbar {
   display: none;
 }
@@ -126,4 +125,229 @@ button.nava:hover {
     margin-left: 44%;
     position: absolute;
     margin-top: -710px;
+} */
+/* --- СБРОС И БАЗОВЫЕ НАСТРОЙКИ --- */
+* {
+    box-sizing: border-box; /* Чтобы отступы не увеличивали размер элементов */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Цвет фона страницы (бежевый, как на скриншоте) */
+    background-color: #CDC5B4; 
+    font-family: 'Verdana', sans-serif; /* Шрифт по умолчанию, если Kaw-pixel не загрузится */
+    color: #000;
+    
+    /* Убираем скроллбары (как ты хотел) */
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+    overflow-x: hidden; /* Запрет горизонтальной прокрутки */
+}
+
+/* Скрываем скроллбар для Chrome/Safari */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    transition: color 0.2s;
+}
+
+/* --- ШАПКА (HEADER) --- */
+header {
+    background-color: #BB1C1C;
+    width: 100%;
+    /* Используем flex для расположения логотипа и текста */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; /* Текст слева, картинка справа */
+    position: relative; /* Чтобы позиционировать элементы внутри */
+}
+
+header h1 {
+    color: #E7F91D; /* Желтый пиксельный цвет */
+    margin: 10px 0 0 20px;
+    font-weight: 900;
+    font-size: 48px;
+    font-family: 'Kaw-pixel', sans-serif;
+}
+
+header h2 {
+    position: absolute;
+    color: white;
+    margin: 5px 0 0 20px;
+    margin-top: 80px;
+    font-size: 24px;
+    font-family: 'Kaw-pixel', sans-serif;
+}
+
+/* Логотип Power */
+.power-csm {
+    width: 140px;
+    height: 140px;
+    /* На больших экранах прижимаем вправо */
+
+    margin-top: -10px; /* Небольшая коррекция высоты */
+}
+
+.power-csm img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* --- РАЗДЕЛИТЕЛЬ С КНОПКОЙ --- */
+.separator {
+    background-color: #ffffff;
+    width: 100%;
+    height: 30px; /* Чуть выше, чтобы кнопка влезла */
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    /* Приклеиваем к низу хедера, если нужно, или оставляем в потоке */
+    position: sticky;
+    bottom: 0;
+}
+
+.btn-toggle {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Kaw-pixel', sans-serif;
+    font-size: 14px;
+    color: black;
+    border-radius: 2px;
+    height: inherit;
+}
+.btn-toggle:hover {
+    color: #fff;
+    background-color: #30302f;
+}
+
+/* --- ОСНОВНОЙ КОНТЕНТ (MAIN) --- */
+main {
+    width: 100%;
+    max-width: 1920px; /* Ограничитель ширины для очень больших мониторов */
+    margin: 0 auto;
+    padding: 20px;
+    
+    /* ГЛАВНОЕ: Располагаем блоки горизонтально */
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; /* Распределяем пространство */
+    gap: 20px; /* Расстояние между текстом и кнопками */
+}
+
+/* Левая колонка с текстом */
+.main_info {
+    background-color: #D9D9D9;
+    padding: 20px;
+    border-radius: 5px;
+    
+    /* Гибкая ширина */
+    flex: 1; /* Занимает всё доступное место */
+    max-width: 800px; /* Но не шире 800px */
+    min-width: 300px;
+    
+    height: fit-content; /* Высота по контенту */
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.main_info a {
+    text-decoration: none;
+    color: #BB1C1C;
+}
+.main_info a:hover {
+    color: #E7F91D;
+}
+
+/* Правая колонка с кнопками */
+.navigate {
+    /* Кнопки в ряд, как на картинке */
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; /* Прижать к верху */
+    gap: 10px; /* Расстояние между кнопками */
+    flex-wrap: wrap; /* Если экран узкий, кнопки перенесутся */
+    flex: 1; /* Занимает оставшееся место */
+}
+
+button.nava {
+    width: 200px;
+    border: none;
+    background-color: #D9D9D9; /* Светло-серый фон кнопок */
+    color: #BB1C1C; /* Красный текст */
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap; /* Текст не переносится внутри кнопки */
+}
+
+button.nava:hover {
+    color: #E7F91D;
+    background-color: #574000;
+}
+
+/* --- ПОДВАЛ (FOOTER) --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* =========================================
+   АДАПТИВНОСТЬ (ДЛЯ ТЕЛЕФОНОВ И ПЛАНШЕТОВ)
+   ========================================= */
+@media (max-width: 1024px) {
+    /* На планшетах кнопки могут не влезать в ряд справа -> переносим их вниз */
+    main {
+        flex-direction: column; /* Блоки друг под другом */
+    }
+    
+    .navigate {
+        width: 100%;
+        justify-content: flex-start; /* Кнопки слева направо */
+    }
+    
+    .main_info {
+        max-width: 100%; /* Текст на всю ширину */
+    }
+}
+
+@media (max-width: 600px) {
+    /* На телефонах меняем шапку */
+    header {
+        flex-direction: column; /* Вертикальное расположение */
+        align-items: center;
+        text-align: center;
+    }
+    
+    header h1 {
+        margin: 20px 0 5px 0;
+    }
+    
+    header h2 {
+        margin: 0 0 15px 0;
+    }
+    
+    .power-csm {
+        margin: 0 auto 10px auto; /* Центрируем логотип */
+        width: 100px; /* Чуть уменьшаем */
+        height: 100px;
+    }
+
+    /* Кнопки на телефоне делаем на всю ширину */
+    .navigate {
+        flex-direction: column; /* Кнопки друг под другом */
+        width: 100%;
+    }
+    
+    button.nava {
+        width: 100%; /* Растягиваем кнопку */
+        text-align: center;
+    }
 }

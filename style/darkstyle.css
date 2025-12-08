@@ -9,6 +9,10 @@ header.dark-theme {
     color: #ffffff;
     background-color: #242729;
 }
+.btn-toggle.dark-theme:hover {
+    color: #30302f;
+    background-color: #fff;
+}
 main.dark-theme{
     background-color: #292D2F;
     color: #ffffff;
